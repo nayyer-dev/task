@@ -1,0 +1,135 @@
+----------------REACT FRAGMENT--------------
+1. React fragment usko bolte h. => <> </>
+2. React fragment use krne se mere console me fragment nhi dikhega sirf uske andar ka item show hoga.
+3. Jaisi ki ek div liye hm or us div me 2 h1 tag h, to jb hm console me dekhege to 2 hi to dikhega lekin wo div me jo wrap kiye h wo bhi dikhega.
+4. Or fragment use krne se sirf fragment ka item dikhega.
+
+-------------PARENT OR CHILD DIFFERENCE----------------
+1. For ex mere component folder ke andar 2 file h.
+1.1. First ka  naam h let's see sendData.
+1.2. Or second ka naam h sendData2.
+2. To sendData mera parent hua.
+3. Or sendData2 mera child hua.
+4. Ex App.js mera parent hua or app.js me jitna bhi component h wo sb child hua app.js ka.
+5. Or App.js me jitna bhi component child h wo sb siblings h kyuki sb saath me h.
+
+------------SEND DATA TO CHILD COMP.----------------
+1. Child se data parent me kaise bheje.
+2. Ek comp ka data dusre comp me pass krna ho to props use hota h.
+3. Ex => mere 1st comp me <PropsWithFnComp name={"name"} email={"aman@gmail.com"}/> ye data bhej rhe h, name or email.
+4. To isko hmlog 2nd comp me kaise pakdege.
+5. Ex => 2nd comp ka function ka name PropsWithFnComp (props){} h, to hmlog parenthesis ke andar ek props likhege, or phr object ke andar props.name or props.email krege to hmko data mil jayega.
+{props.name}
+{props.email} aise.
+6. or destructure krke bhi hm data bhej skte h sirf object ke andar . lga ke {.name}, {.email} aise, to isme parenthesis ke andar properties nhi use krna hoga. 
+
+----Reference----
+projectName - ReactRivision
+fileName - PropsWithFnComp.
+
+----------------REACT ROUTER V6----------------
+1. Why we use router.
+2. Jb hmlog multiple pages bnate h ReactJS me tb use aata h router.
+3. Or V6 me react-router-dom install krna hota h.
+4. Phr usko ek wrapper me wrap krna hota h.
+5. EX=> import {BrowserRouter} from 'react-router-dom'
+
+------------------PARAMS IN REACT-----------------
+1. Jb bhi dynamic data ui me show karana hota h tb params use krte h.
+
+-------------------ACTIVE LINKS----------------
+1. Active links kya hota h.
+2. Let's see mere pass 2 nav bar h.
+2.1. First Home, Second About.
+3. To jaise hm home pe click kre to home ka color change ho jaye jisse pta chalega ki mera home active ho gya h.
+4. To uske liye 2 method h.
+4.1. First simply style add kr de classname deke.
+4.2. Second navbar wale file me directly style add kr de.
+5. To classname deke style add krna easy h. 
+
+-------------------NESTED ROUTING----------------
+1. Ek Route bna ke uske andar ek or route bnana usko nested routing bolte h.
+2. Jb hm route ke andar route bnayege to.
+3. Let's see mera ek main route h Contact.
+4. Or Contact ke andar 3 or route h.
+4.1. COMPANY, Channel, Other.
+5. To jaise hm main route me aaye Contact wale me.
+6. Or Contact ke andar jo 3 route h usme se kisi route me jane ke liye, main route yani Contact me <Outlet/> use krna hoga or import bhi tb hm apne child route me ja sakege.
+
+-----------------LIFE CYCLE OF REACT------------
+1. Firstly mera return se phle wla code chalega, Jha se code shuru ho rha h wo phle chalega.
+2. Second return ke andar wla code chalega.
+3. Third agr useEffect h to last me useEffect chalega.
+
+------------API CALLING------------
+1. What is api calling?
+2. Jb bhi useState me kch update hoga to component ek baar render hoga.
+3. Until unless hmlog jb tk kch dependencies na de.
+4. useEffect ke andar api call ho rha h or useState se component ek baar render ho rha h.
+5. Or useEffect ke andar jo api call ho rha h, Agr hm us api ko useEffect se bahar kr dege to api baar baar call hota jayega. 
+6. Kyu api ko bahar krne se api baar baar call ho rha h, Kyuki api ko hm useEffect se bahar kr diye h, Or setData me jb data aaya to state change hua to iske wajah se api baar baar render ho rha h. 
+
+----------------PREVIOUS STATE--------------
+1. Previous state means mere current state wale se phle wla state.
+2. let random=Math.floor(Math.random()*10)
+3. Math.random, ramdom number generate krta h. Pr wo decimal me rhta h. Usko number me krne ke liye.
+4. Math.floor use krege.  
+
+-------------------GIT COMMAND TO PUSH CODE IN GIT-----------------
+1. git add .
+2. git commit -m "Your commit message here"
+3. git remote add origin [use only one time to set origin]
+4. git push -u origin master means [branch name]
+
+------------CONTEXT API---------------
+1. Basically context se hm data bhej skte h mainCompoent se childComponent me phr childComponent se superChildComponent me bhi bhej skte h, phr superChildComponent se main me bhi bhej skte h.
+2. In simple terms, the Context API in React allows you to share data across many components in your app, without having to pass data through props manually at each level of the component tree.  
+
+------------useEffect KA dependencies arrya kasie work krta h----------
+
+--Reference--
+projectName - ecommerce
+fileName - filter_context or productcontext.
+
+1. useEffect me dependencies array me products pass kr rhe h. [fileName - filterContext]
+2. To phle dekhege products kha se mil rha h, products hmko  useProductContext se mil rha h.
+3. Phr dekhege useProductContext kha  se call ho rha h, useProductContext productcontext se call ho rha h.
+4. productcontext me jayege to phle code ka flow dekhege ki phle konsa code run rha h.
+5. code first line shuru hota h, phr return ka code chlta h, phr useEffect ka.
+6. To shuru me initialState jisme hm products me empty array h. yani phle initialState ka code chalege.
+7. Phr mera do function h getProducts or ek getSingleProduct h to ye dono call ne ho rha h ye dono function nhi chalega.
+8. Phr return ka code chalega.
+9. Phr useEffect ka to useEffect me getProducts function call ho rha h to getProducts wale function se api call ho rha h tb data milega.
+10. yani ek baar jb useEffect chala to usme data nhi mila sirf empty array mila kyuki us waqt tk api call hua hi nhi tha jb dobara useEffect chala to usme data mila array of object ke form me kyuki tb getProducts wla function call hua or getProducts wale function se hi api call ho rha h.
+
+
+----Route ke through konsa component call ho rha h uske find kasie kre----
+1. Left side wale Search bar me jake / or route ka naam search krege to pta chalega kha kha se call ho rha h perticular component. 
+2. or < or component ka naam search krege to pta chalge wo component kis component se call ho rha h.
+3. Or case ko search krne ke liye right click krke find all reference krege to pta chalega ki wo case kha use ho rha h. 
+
+----How to handle error of cannot read properties of undifined reading map----
+1. ye wala error cart page me aa rha tha.
+2. kyuki hm item set nhi kr rhe the cartReducer me.
+3. or cart page me console galat jgah lga rhe the.
+
+--Reference--
+projectName - ecommerce
+fileName - cartReducer and cart
+
+-----Benefits of using context-----
+1. productContext me do function bnaye h (1)getProducts and (2)getSingleProduct.
+2. Ab getProducts ko to productContext me se call kr rhe h.
+3. Or getSingleProduct ko singleProduct se kyu nhi call kr rhe h.
+4. kyuki hm getSingleProduct ko productContext se call nhi kr skte h. kyuki singleProduct ko useProductContext se call kr rhe h or useProductContext bht jgah use ho rha h.
+5. getSingleProduct ko productContext me se call krne ke liye id pass krna hoga.
+6. or agar context use nhi krege to hr jgah state bnana hoga or api call krna hoga.
+7. pr context me aisa ne h ek jgah call kro or dusre dusre component me use kr skte h.
+
+--Reference--
+projectName - ecommerce
+fileName - singleProduct or productContext 
+
+
+---Update Filter Value---
+1. https://www.loom.com/share/ce8605b9755d42ed9e772f34690e5ef3?sid=44832f66-a672-4114-b389-54a0fdcee097 
